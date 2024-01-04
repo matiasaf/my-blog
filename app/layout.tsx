@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import MyProfilePic from "./components/MyProfilePic";
 import Navbar from "./components/Navbar";
 import "./globals.css";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Matias's Blog",
@@ -14,11 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="dark:bg-slate-800">
-        <Navbar />
-        <MyProfilePic />
-        {children}
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

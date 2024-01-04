@@ -1,4 +1,5 @@
 import { getSortedPostsData } from "@/lib/posts";
+
 import ListItem from "./ListItem";
 
 function Posts() {
