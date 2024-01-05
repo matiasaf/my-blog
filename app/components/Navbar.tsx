@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaYoutube, FaTwitter, FaGithub, FaLaptop } from "react-icons/fa";
+import { FaYoutube, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 import ThemeSwitch from "./ThemeSwitch";
 
 export default function Navbar() {
@@ -16,28 +16,20 @@ export default function Navbar() {
         </h1>
         <div className="flex flex-row justify-center sm:justify-evenly align-middle gap-4 text-white text-4xl lg:text-5xl">
           <Link
-            className="text-white/90 hover:text-white"
-            href="https://www.youtube.com/channel/UCTFngDaASTQMPLgSC_kFRgQ"
-          >
-            <FaYoutube />
-          </Link>
-          <Link
             className="hover:text-white text-white/90"
-            href="https://twitter.com/MatiasAF"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/fernandez-amatias/"
           >
-            <FaTwitter />
+            <FaLinkedin />
           </Link>
           <Link
             className="text-white/90 hover:text-white"
+            rel="noopener noreferrer"
+            target="_blank"
             href="https://github.com/matiasaf"
           >
             <FaGithub />
-          </Link>
-          <Link
-            className="text-white/90 hover:text-white"
-            href="https://www.youtube.com/channel/UCTFngDaASTQMPLgSC_kFRgQ"
-          >
-            <FaLaptop />
           </Link>
           <ThemeSwitch />
         </div>
